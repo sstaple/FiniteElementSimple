@@ -35,7 +35,7 @@ namespace FiniteElementSimple.Elements
 		
 		public override double [] GlobalXPosition(double xi, double eta, double zeta){
 			double [] nodalX = new double[]{x1, x2};
-			double [] X1d = myMath.MatrixMath.Multiply(ShapeFunction(xi, eta, zeta), nodalX);
+			double [] X1d = RandomMath.MatrixMath.Multiply(ShapeFunction(xi, eta, zeta), nodalX);
 			return new double[]{X1d[0], 0.0, 0.0};
 		}
 		

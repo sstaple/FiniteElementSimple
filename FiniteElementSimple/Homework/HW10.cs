@@ -321,7 +321,7 @@ namespace FiniteElementSimple.Homework
 			//Then I make a color scheme and create the plot.  This part will be different for you: I was calling a function I 
 			//Had already written
 			Color [] colorScheme = new Color[]{Color.Blue, Color.Aqua, Color.LimeGreen, Color.Yellow, Color.Red};
-			SinglePlot.SinglePlotForm myPlot = new SinglePlot.SinglePlotForm(zTitle, lXData.ToArray(), lYData.ToArray(), 
+            SinglePlotZedGraph.SinglePlotForm myPlot = new SinglePlotZedGraph.SinglePlotForm(zTitle, lXData.ToArray(), lYData.ToArray(), 
 			                                                                 lZData.ToArray(), colorScheme);
 			myPlot.Activate();
 			myPlot.ShowDialog();

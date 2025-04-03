@@ -9,7 +9,7 @@
 using System;
 using NUnit.Framework;
 using System.Collections.Generic;
-using SinglePlot;
+using SinglePlotZedGraph;
 using FiniteElementSimple.Elements;
 
 namespace FiniteElementSimple

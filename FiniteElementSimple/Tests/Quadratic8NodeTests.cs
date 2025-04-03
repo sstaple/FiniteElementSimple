@@ -8,7 +8,7 @@
  */
 using System;
 using NUnit.Framework;
-using myMath;
+using RandomMath;
 using System.Collections.Generic;
 using FiniteElementSimple.Elements;
 

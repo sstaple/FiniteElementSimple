@@ -57,15 +57,14 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="myMath, Version=1.0.7011.23785, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\JointElementDesigner\JointElementEx\JointElement\myMath\myMath\bin\Debug (1)\myMath.dll</HintPath>
-    </Reference>
     <Reference Include="NUnit.Framework">
       <HintPath>$(SharpDevelopBinPath)\Tools\NUnit\NUnit.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="SinglePlot">
-      <HintPath>..\..\SinglePlot\bin\Debug\SinglePlot.dll</HintPath>
+    <Reference Include="RandomMath, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StapletonMathPackage.1.1.6\lib\netstandard2.0\RandomMath.dll</HintPath>
+    </Reference>
+    <Reference Include="SinglePlotZedGraph, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SinglePlotZedGraph.1.0.0\lib\net40\SinglePlotZedGraph.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

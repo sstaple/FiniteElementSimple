@@ -8,7 +8,7 @@
  */
 using System;
 using System.Collections.Generic;
-using SinglePlot;
+using SinglePlotZedGraph;
 using FiniteElementSimple.Elements;
 
 namespace FiniteElementSimple

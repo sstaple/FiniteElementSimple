@@ -64,7 +64,7 @@ namespace FiniteElementSimple
 			ApplyLoads();
 			ApplyDisplacementBCs();
 			//Actually solve
-			GlobalQ = myMath.MatrixMath.LinSolve(GlobalK, GlobalF);
+			GlobalQ = RandomMath.MatrixMath.LinSolve(GlobalK, GlobalF);
 			AssignGlobalQToElements();
 			
 		}
@@ -85,7 +85,7 @@ namespace FiniteElementSimple
 			}
 
 			
-			SinglePlot.SinglePlotForm myPlot = new SinglePlot.SinglePlotForm("Mesh", "x", "y", lLabels, lX, lY);
+			SinglePlotZedGraph.SinglePlotForm myPlot = new SinglePlotZedGraph.SinglePlotForm("Mesh", "x", "y", lLabels, lX, lY);
 			myPlot.myPane.Legend.IsVisible = false;
 
             for (int i = 0; i < myPlot.myPane.CurveList.Count; i++)
@@ -170,7 +170,7 @@ namespace FiniteElementSimple
 		
 		private void ApplyDisplacementBCs()
 		{
-			C = myMath.MatrixMath.GetMax(GlobalK)*1e4;
+			C = RandomMath.MatrixMath.GetMax(GlobalK)*1e4;
 			
 			foreach (BC dbc in lBCs) {
 				GlobalF[dbc.dofNumber] += dbc.magnitude * C;

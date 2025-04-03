@@ -7,7 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using myMath;
+using RandomMath;
 
 namespace FiniteElementSimple.Elements
 {
@@ -38,7 +38,7 @@ namespace FiniteElementSimple.Elements
 		
 		public override double [] GlobalXPosition(double xi, double eta, double zeta){
 			double [] nodalX = new double[]{x1, x2, x3};
-			double [] X1d = myMath.MatrixMath.Multiply(ShapeFunction(xi, eta, zeta), nodalX);
+			double [] X1d = RandomMath.MatrixMath.Multiply(ShapeFunction(xi, eta, zeta), nodalX);
 			return new double[]{X1d[0], 0.0, 0.0};
 		}
 		
@@ -51,12 +51,12 @@ namespace FiniteElementSimple.Elements
 		
 		public override double Det_Of_J(double xi, double eta, double zeta){
 			
-			return myMath.MatrixMath.Determinant(J(xi, eta, zeta)) * (area / 4.0);
+			return RandomMath.MatrixMath.Determinant(J(xi, eta, zeta)) * (area / 4.0);
 		}
 		
 		public override double [,] J(double xi, double eta, double zeta){
 			
-			return myMath.MatrixMath.Multiply(dNdxi(xi), new double[,]{{x1},{x2},{x3}});
+			return RandomMath.MatrixMath.Multiply(dNdxi(xi), new double[,]{{x1},{x2},{x3}});
 		}
 				
 		private double [,] N_Base(double x, double x_1, double x_2, double x_3){
